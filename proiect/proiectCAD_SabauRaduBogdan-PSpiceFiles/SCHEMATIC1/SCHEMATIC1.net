@@ -1,0 +1,44 @@
+* source PROIECTCAD_SABAURADUBOGDAN
+X_U1         N01288 N00401 VCC -VCC N01182 uA741
+V_VCC         VCC 0 12V
+V_-VCC         -VCC 0 -12V
+R_R1         N05088 N01182 R_R1 1k TC=0,0 
+.model        R_R1 RES R=1 DEV=1% TC1=0 TC2=0
+R_R2         OUT VCC R_R2 1028 TC=0,0 
+.model        R_R2 RES R=1 DEV=1% TC1=0 TC2=0
+X_U3         N09213 N00482 V+ V- N00401 uA741
+X_U4         N01426 N01288 V+ V- N01288 uA741
+X_U5         N00763 N00365 V+ V- N00365 uA741
+R_R3         N00482 N00401 R_R3 6.65k TC=0,0 
+.model        R_R3 RES R=1 DEV=1% TC1=0 TC2=0
+R_R4         N09209 N00482 R_R4 1k TC=0,0 
+.model        R_R4 RES R=1 DEV=1% TC1=0 TC2=0
+R_Rs         0 N00763 R_Rs {R} TC=0,0 
+.model        R_Rs RES R=1 DEV=1% TC1=0 TC2=0
+R_R11         N01426 VCC R_R11 6.98k TC=0,0 
+.model        R_R11 RES R=1 DEV=1% TC1=0 TC2=0
+R_R12         0 N01426 R_R12 4.99k TC=0,0 
+.model        R_R12 RES R=1 DEV=1% TC1=0 TC2=0
+Q_Q6         N00763 N03994 N04234 Q2N2604
+Q_Q7         N03994 N03994 N04230 Q2N2604
+R_R13         0 N03994 R_R13 78.7k TC=0,0 
+.model        R_R13 RES R=1 DEV=1% TC1=0 TC2=0
+R_R14         N04230 VCC R_R14 1k TC=0,0 
+.model        R_R14 RES R=1 DEV=1% TC1=0 TC2=0
+R_R15         N04234 VCC R_R15 1k TC=0,0 
+.model        R_R15 RES R=1 DEV=1% TC1=0 TC2=0
+D_D1          N05088 0 LedOrange 
+R_R16         N01182 N13651 R_R16 28k TC=0,0 
+.model        R_R16 RES R=1 DEV=1% TC1=0 TC2=0
+R_R17         N00365 N09213 R_R17 1k TC=0,0 
+.model        R_R17 RES R=1 DEV=1% TC1=0 TC2=0
+R_R18         0 N09213 R_R18 6.65k TC=0,0 
+.model        R_R18 RES R=1 DEV=1% TC1=0 TC2=0
+X_U6         N09549 N09209 V+ V- N09209 uA741
+R_R19         VCC N09549 R_R19 9.76k TC=0,0 
+.model        R_R19 RES R=1 DEV=1% TC1=0 TC2=0
+R_R20         0 N09549 R_R20 3.32k TC=0,0 
+.model        R_R20 RES R=1 DEV=1% TC1=0 TC2=0
+Q_Q8         0 N13651 OUT Q2N2604
+.IC         V(N00482 )=0
+.PARAM  r=22k
